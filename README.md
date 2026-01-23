@@ -1,149 +1,95 @@
-# Data-Cleaner
-# Objective:
+# 🧹 Python Data Cleaner
 
- The objective of this term project is to create a comprehensive Python library for data preprocessing tasks, publishable on the Python Package Index (PyPI). The library provides functions for various data cleaning, transformation, and manipulation operations.
+Python Data Cleaner is a **modular data preprocessing library** developed to handle common data cleaning, transformation, and preparation tasks required in data analysis and machine learning workflows.
 
- 
-# Project Goals and Scope:
- The primary goal of this project is to develop a publishable Python library for data preprocessing. The library includes a variety of functions to handle common data preprocessing tasks such as missing value handling, outlier detection, data scaling, text cleaning,
- 
- data type conversion, categorical encoding, and datetime handling. The scope of the project covers the following functionalities:
- 
-# Data Cleaning:
+This project was designed as a **publishable Python library** with a clean structure, reusable components, and unit tests for reliability.
 
- 1. Handling Missing Values:
+---
 
-  - Imputation with mean, median, constant, or deletion
-    
- 2. Identifying and Correcting Outliers:
-    
-- IQR outlier detection with threshold
-  
- 3. Standardizing and Normalizing Data:
+## 🎯 Project Objective
 
-    - Min-Max and Standard normalization
-      
- 4. String Manipulation and Text Cleaning:
-    
-    - Remove stopwords, lowercase, remove punctuation, lemmatize (requires NLTK)
-      
-# Data Transformation:
+The main objective of this project is to provide a **comprehensive and user-friendly Python library** for data preprocessing tasks, including:
 
- 1. Data Type Conversion:
+- Data cleaning
+- Data transformation
+- Feature preparation
+- Text and datetime processing
 
-    - Convert to numeric, convert to categorical
-    
- 2. Encoding Categorical Data:
-   
-    - One hot encode, label encode
-    
- 3. Date and Time Manipulation:
-   
-    - convert to datetime, extract date features, find and process datetime column, clean invalid dates
-      
-# Technical Design and Implementation:
+The library is suitable for academic use, personal projects, and machine learning pipelines.
 
- The library is implemented using Python, leveraging pandas and NumPy for data handling, and NLTK for text processing. The library is structured into several submodules, each focusing on a specific aspect of data preprocessing.
- 
- # Submodules and Their Functionalities:
- # 1. MissingValueHandler
- 
- Provides methods for handling missing values
- 
- - impute_mean: Fill missing values with the mean.
-   
- - impute_median: Fill missing values with the median.
-   
- - impute_constant: Fill missing values with a constant value.
-     
- - drop_missing: Drop rows containing missing values.
+---
 
-         
- # 2. OutlierHandler
- 
- Provides methods for detecting and handling outliers.
- 
- - iqr_outliers: Detects and cleans outliers using the IQR method.
- 
- - filter_rare_categories: Filters rare categories.
-   
- - lower_text: Converts text to lowercase and removes unnecessary spaces.
-     
-- upper_text: Converts text to uppercase and removes unnecessary spaces.
+## 🧩 Project Scenario
 
-         
-# 3. TextCleaner
+The library is intended to be used by data analysts and machine learning practitioners who need to preprocess raw datasets before analysis or model training.
 
- Provides methods for text cleaning and manipulation.
- 
-- remove_stopwords: Removes stopwords.
+Typical workflow:
+1. Load a dataset
+2. Apply preprocessing operations (e.g., missing value handling, scaling)
+3. Transform and clean features
+4. Use the processed data for analysis or modeling
 
-- to_lowercase: Converts text to lowercase.
+---
 
-- remove_punctuation: Removes punctuation marks.
+## ✨ Features
 
-- lemmatize: Lemmatizes words to their root form.
+### 🔹 Data Cleaning
+- Handle missing values (mean, median, constant, drop)
+- Detect and clean outliers using IQR
+- Filter rare categories
 
-  
-# 4. Scaler
+### 🔹 Data Transformation
+- Min-Max normalization
+- Standard scaling (z-score)
+- Data type conversion (numeric, categorical)
 
- Normalizes or standardizes the dataset.
- 
-- min_max_scale: Performs Min-Max normalization.
+### 🔹 Text Processing
+- Text cleaning (lowercase, punctuation removal)
+- Stopword removal
+- Lemmatization (NLTK-based)
 
-- standard_scale: Standardizes using z-score normalization.
+### 🔹 Categorical Encoding
+- Label encoding
+- One-hot encoding
 
-  
-# 5. DataTypeConverter
+### 🔹 Date & Time Handling
+- Convert to datetime format
+- Extract date features
+- Detect and process datetime columns
+- Clean invalid date values
 
- Converts data types.
- 
-- to_numeric: Converts data to numeric type.
+---
 
-- to_categorical: Converts data to categorical type.
+## 🛠 Technologies Used
 
-  
-# 6. CategoricalEncoder
+- Python
+- Pandas
+- NumPy
+- NLTK
+- Unit Testing (pytest-style tests)
 
- Encodes categorical data.
- 
-- label_encode: Performs label encoding.
+---
 
-- one_hot_encode: Performs one-hot encoding.
+## 🧱 Library Structure
 
-  
- # 7. DateTimeHandler
- 
- Handles date and time data.
- 
-- convert_to_datetime: Converts data to datetime format.
-
-- extract_date_features: Extracts date features.
-
-- find_and_process_datetime_column: Finds and processes a datetime column.
-
-- clean_invalid_dates: Cleans invalid dates.
-
-
-# Main Script (main.py):
- The main script provides an interactive menu for users to select and apply various data preprocessing operations. The user is prompted to choose a task, such as handling missing values, scaling data, or encoding categorical data. Based on the user's input, the 
- 
- corresponding functions from the submodules are called, and the processed data is displayed.
- 
- # Workflow:
- 
- 1. Load the dataset.
- 
- 2. Display the preprocessing menu.
-  
- 3. User selects an operation (e.g., handling missing values).
-  
- 4. User specifies parameters (e.g., column name, imputation method).
-  
- 5. Apply the selected preprocessing operation.
-    
- 6. Display the processed data.
-
-# Testing:
-
- Unit tests are implemented for each submodule to ensure the correctness and robustness of the functions. The tests cover various edge cases and typical usage scenarios.
+```text
+data_cleaner/
+│── __init__.py
+│── missing_value_handler.py
+│── outlier_handler.py
+│── scaler.py
+│── text_cleaner.py
+│── categorical_encoder.py
+│── data_type_converter.py
+│── datetime_handler.py
+│
+tests/
+│── test_missing_value_handler.py
+│── test_outlier_handler.py
+│── test_scaler.py
+│── test_text_cleaner.py
+│── test_categorical_encoder.py
+│── test_data_type_converter.py
+│── test_datetime_handler.py
+│
+main.py
