@@ -1,4 +1,4 @@
-# 🧹 Python Data Cleaner
+#  Python Data Cleaner
 
 Python Data Cleaner is a **modular data preprocessing library** developed to handle common data cleaning, transformation, and preparation tasks required in data analysis and machine learning workflows.
 
@@ -6,7 +6,7 @@ This project was designed as a **publishable Python library** with a clean struc
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 The main objective of this project is to provide a **comprehensive and user-friendly Python library** for data preprocessing tasks, including:
 
@@ -19,7 +19,7 @@ The library is suitable for academic use, personal projects, and machine learnin
 
 ---
 
-## 🧩 Project Scenario
+##  Project Scenario
 
 The library is intended to be used by data analysts and machine learning practitioners who need to preprocess raw datasets before analysis or model training.
 
@@ -31,7 +31,7 @@ Typical workflow:
 
 ---
 
-## ✨ Features
+##  Features
 
 ### 🔹 Data Cleaning
 - Handle missing values (mean, median, constant, drop)
@@ -70,7 +70,7 @@ Typical workflow:
 
 ---
 
-## 🧱 Library Structure
+##  Library Structure
 
 ```text
 data_cleaner/
